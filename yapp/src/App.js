@@ -1,12 +1,20 @@
-
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./coomponets/Home";
+import Pagination from "./coomponets/Pagination";
+import NavBar from "./coomponets/NavBar";
 
 function App() {
+
   return (
-    <>
     <div>
-      React Js Appliaction
+      <NavBar/>
+    <Routes>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/pagination" element={<Pagination/>}/>
+    </Routes>
     </div>
-    </>
+    
   );
 }
 
